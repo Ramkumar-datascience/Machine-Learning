@@ -279,7 +279,7 @@ training data. Limiting the tree's complexity can help it generalize
 better.
 
 ## 11. Classification vs. Regression
-
+![Decision Tree Classifier vs Regressor](images/DTR.png)
   -----------------------------------------------------------------------
   Concept                 Decision Tree           Decision Tree Regressor
                           Classifier              
