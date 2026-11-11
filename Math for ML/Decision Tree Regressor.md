@@ -70,8 +70,8 @@ Where:
 ```
 For a candidate split, the weighted child error is:
 ```math
-\[ MSE\_{`\text{split}`{=tex}} = `\frac{n_L}{n}`{=tex}MSE_L +
-`\frac{n_R}{n}`{=tex}MSE_R \]
+MSE\_{`\text{split}`{=tex}} = `\frac{n_L}{n}`{=tex}MSE_L +
+`\frac{n_R}{n}`{=tex}MSE_R
 ```
 
 The tree chooses the split with the **lowest weighted child MSE**
@@ -95,14 +95,14 @@ Prices: 20, 25, 30
 Mean price:
 
 ```math
-\[ `\bar`{=tex}{y}\_L = `\frac{20+25+30}{3}`{=tex}=25 \]
+`\bar`{=tex}{y}\_L = `\frac{20+25+30}{3}`{=tex}=25
 ```
 
 MSE:
 
 ```math
-\[ MSE_L = `\frac{(20-25)^2+(25-25)^2+(30-25)^2}{3}`{=tex}
-=`\frac{50}{3}`{=tex}`\approx16.67`{=tex} \]
+MSE_L = `\frac{(20-25)^2+(25-25)^2+(30-25)^2}{3}`{=tex}
+=`\frac{50}{3}`{=tex}`\approx16.67`{=tex}
 ```
 
 ### Right child
@@ -114,7 +114,7 @@ Prices: 35, 40, 45, 50, 55
 Mean price:
 
 ```math
-\[ `\bar`{=tex}{y}\_R = `\frac{35+40+45+50+55}{5}`{=tex}=45 \]
+`\bar`{=tex}{y}\_R = `\frac{35+40+45+50+55}{5}`{=tex}=45
 ```
 
 MSE:
