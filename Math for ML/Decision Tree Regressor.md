@@ -63,15 +63,12 @@ The Mean Squared Error at a node is:
 MSE = \frac{1}{n}\sum_{i=1}^{n}(y_i-\bar{y})^2
 ```
 Where:
-```math
--   (y_i) is an actual target value.
--   (`\bar`{=tex}{y}) is the mean target value in that node.
--   \(n\) is the number of records in that node.
-```
+- `y_i` is an actual target value.
+- `\bar{y}` is the mean target value in that node.
+- `n` is the number of records in that node.
 For a candidate split, the weighted child error is:
 ```math
-MSE\_{`\text{split}`{=tex}} = `\frac{n_L}{n}`{=tex}MSE_L +
-`\frac{n_R}{n}`{=tex}MSE_R
+MSE_{\text{split}} = \frac{n_L}{n} MSE_L + \frac{n_R}{n} MSE_R
 ```
 
 The tree chooses the split with the **lowest weighted child MSE**
@@ -95,14 +92,14 @@ Prices: 20, 25, 30
 Mean price:
 
 ```math
-`\bar`{=tex}{y}\_L = `\frac{20+25+30}{3}`{=tex}=25
+\bar{y}_L = \frac{20+25+30}{3} = 25
 ```
 
 MSE:
 
 ```math
-MSE_L = `\frac{(20-25)^2+(25-25)^2+(30-25)^2}{3}`{=tex}
-=`\frac{50}{3}`{=tex}`\approx16.67`{=tex}
+MSE_L = \frac{(20-25)^2+(25-25)^2+(30-25)^2}{3}
+= \frac{50}{3} \approx 16.67
 ```
 
 ### Right child
@@ -114,16 +111,17 @@ Prices: 35, 40, 45, 50, 55
 Mean price:
 
 ```math
-`\bar`{=tex}{y}\_R = `\frac{35+40+45+50+55}{5}`{=tex}=45
+\bar{y}_R = \frac{35+40+45+50+55}{5} = 45
 ```
 
 MSE:
 
 ```math
-\[ MSE_R =
-`\frac{(35-45)^2+(40-45)^2+(45-45)^2+(50-45)^2+(55-45)^2}{5}`{=tex} \]
+MSE_R = \frac{(35-45)^2+(40-45)^2+(45-45)^2+(50-45)^2+(55-45)^2}{5}
+```
 
-\[ MSE_R = `\frac{250}{5}`{=tex}=50 \]
+```math
+MSE_R = \frac{250}{5} = 50
 ```
 
 ### Weighted MSE for this split
@@ -131,9 +129,7 @@ MSE:
 There are 8 records in total: 3 on the left and 5 on the right.
 
 ```math
-\[ MSE\_{`\text{split}`{=tex}} =
-`\frac{3}{8}`{=tex}(16.67)+`\frac{5}{8}`{=tex}(50) `\approx37.5`{=tex}
-\]
+MSE_{\text{split}} = \frac{3}{8}(16.67) + \frac{5}{8}(50) \approx 37.5
 ```
 
 This is the weighted error remaining after this particular split. The
