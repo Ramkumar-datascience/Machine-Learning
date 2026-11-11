@@ -285,7 +285,7 @@ better.
   Example                 Predict Yes/No          Predict house price
   -----------------------------------------------------------------------
 
-## 12. Classroom takeaway
+## 12. Final takeaway
 
 1.  A Decision Tree Regressor predicts numerical values.
 2.  It does not use Entropy or Information Gain.
