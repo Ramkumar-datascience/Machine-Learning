@@ -1,4 +1,4 @@
-# Decision Tree Regressor (DTR) --- Step-by-Step Explanation
+# Decision Tree Regressor (DTR) --- Step-by-Step Procedure
 
 ## 1. What is Decision Tree Regression?
 
@@ -16,7 +16,7 @@ predict categories such as Yes or No.
 
 ## 2. Example dataset
 
-We will use this small dataset throughout the explanation.
+Let's create small dataset for the explanation.
 
     House size (sq. ft.)   Price (₹ lakhs)
   ---------------------- -----------------
@@ -63,15 +63,16 @@ The Mean Squared Error at a node is:
 MSE = \frac{1}{n}\sum_{i=1}^{n}(y_i-\bar{y})^2
 ```
 Where:
-$$
+```math
 -   (y_i) is an actual target value.
 -   (`\bar`{=tex}{y}) is the mean target value in that node.
 -   \(n\) is the number of records in that node.
-$$
+```
 For a candidate split, the weighted child error is:
-
+```math
 \[ MSE\_{`\text{split}`{=tex}} = `\frac{n_L}{n}`{=tex}MSE_L +
 `\frac{n_R}{n}`{=tex}MSE_R \]
+```
 
 The tree chooses the split with the **lowest weighted child MSE**
 (equivalently, the greatest reduction in squared error relative to the
@@ -93,12 +94,16 @@ Prices: 20, 25, 30
 
 Mean price:
 
+```math
 \[ `\bar`{=tex}{y}\_L = `\frac{20+25+30}{3}`{=tex}=25 \]
+```
 
 MSE:
 
+```math
 \[ MSE_L = `\frac{(20-25)^2+(25-25)^2+(30-25)^2}{3}`{=tex}
 =`\frac{50}{3}`{=tex}`\approx16.67`{=tex} \]
+```
 
 ### Right child
 
@@ -108,22 +113,28 @@ Prices: 35, 40, 45, 50, 55
 
 Mean price:
 
+```math
 \[ `\bar`{=tex}{y}\_R = `\frac{35+40+45+50+55}{5}`{=tex}=45 \]
+```
 
 MSE:
 
+```math
 \[ MSE_R =
 `\frac{(35-45)^2+(40-45)^2+(45-45)^2+(50-45)^2+(55-45)^2}{5}`{=tex} \]
 
 \[ MSE_R = `\frac{250}{5}`{=tex}=50 \]
+```
 
 ### Weighted MSE for this split
 
 There are 8 records in total: 3 on the left and 5 on the right.
 
+```math
 \[ MSE\_{`\text{split}`{=tex}} =
 `\frac{3}{8}`{=tex}(16.67)+`\frac{5}{8}`{=tex}(50) `\approx37.5`{=tex}
 \]
+```
 
 This is the weighted error remaining after this particular split. The
 algorithm compares it with the weighted error from other candidate
