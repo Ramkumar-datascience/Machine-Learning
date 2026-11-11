@@ -280,19 +280,7 @@ better.
 
 ## 11. Classification vs. Regression
 ![Decision Tree Classifier vs Regressor](images/DTR.PNG)
-  -----------------------------------------------------------------------
-  Concept                 Decision Tree           Decision Tree Regressor
-                          Classifier              
-  ----------------------- ----------------------- -----------------------
-  Target                  Categorical             Numerical
-
-  Common split criteria   Gini, Entropy           Squared error (MSE),
-                                                  Absolute error (MAE)
-
-  Split objective         Reduce class impurity   Reduce prediction error
-
-  Leaf prediction         Predicted class         Mean (squared error) or
-                                                  median (absolute error)
+  
 
   Example                 Predict Yes/No          Predict house price
   -----------------------------------------------------------------------
